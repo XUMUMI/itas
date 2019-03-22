@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="Client">
+    <output-path>$PROJECT_DIR$/out/artifacts/Client</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="javaee-facet-classes" facet="Client_Server/web/Web" />
+          <element id="module-output" name="Client_Server" />
+          <element id="library" level="project" name="MacAddress" />
+          <element id="library" level="project" name="SQL_Ctrl" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.5" />
+          <element id="library" level="project" name="Maven: org.mariadb.jdbc:mariadb-java-client:2.4.1" />
+        </element>
+      </element>
+      <element id="dir-copy" path="F:\Work\School\广东科学技术职业学院\创新创业项目\基于WIFI探针的智能 (无感知) 签到系统\code\itas\Client_Server\web" />
+      <element id="javaee-facet-resources" facet="Client_Server/web/Web" />
+    </root>
+  </artifact>
+</component>
