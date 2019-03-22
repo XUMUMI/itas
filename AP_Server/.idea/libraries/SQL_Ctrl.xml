@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="SQL_Ctrl">
+    <ANNOTATIONS>
+      <root url="file://$PROJECT_DIR$/../SQL_Ctrl/out/production/SQL_Ctrl" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../SQL_Ctrl/out/production/SQL_Ctrl" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

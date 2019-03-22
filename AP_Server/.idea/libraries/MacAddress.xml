@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MacAddress">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../lib/MacAddress/out/production/MacAddress" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
