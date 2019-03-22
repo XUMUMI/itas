@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ITAS</string>
+    <string name="log_in">登录</string>
+    <string name="log_name">用户名</string>
+    <string name="log_password">密码</string>
+    <string name="sig_up">注册</string>
+    <string name="sig_name">用户名(不可修改)</string>
+    <string name="sig_email">邮箱</string>
+    <string name="sig_next">下一步</string>
+    <string name="sig_password">设置密码</string>
+    <string name="confirm_password">再次确认密码</string>
+    <string name="sig_done">完成</string>
+    <string name="sig_previous">上一步</string>
+    <string name="Guides">已有账号</string>
+    <string name="usr_hint">这不是我的账号</string>
+    <string name="sig_name_error">用户名只能是4-16个字母或数字！</string>
+    <string name="sig_name_blank">用户名不能为空！</string>
+    <string name="sig_email_blank">邮箱不能为空 !</string>
+    <string name="sig_email_error">邮箱格式错误!</string>
+    <string name="sig_pass_error">密码长度应介于6-32之间！</string>
+    <string name="sig_pass_blank">密码不能为空!</string>
+    <string name="sig_pass_confirm_error">两次输入的密码不相同！</string>
+    <string name="sig_name_taken">用户名已存在 !</string>
+    <string name="log_name_error">用户名无效!</string>
+    <string name="log_pass_error">密码无效</string>
+    <string name="log_error">用户名不存在或密码错误！</string>
+    <string name="tu">tu</string>
+</resources>
