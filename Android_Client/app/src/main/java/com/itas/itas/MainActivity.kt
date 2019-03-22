@@ -31,44 +31,38 @@ class MainActivity : AppCompatActivity() {
         setTheme(Theme.theme1)
         setContentView(R.layout.activity_main)
 
-
-        /* 获取 Button 颜色值 */
+        //获取Button颜色值
         val colorDrawable = getColorByAttributeId(R.attr.colorAccent)
 
-       /* 获取手机屏幕宽度 */
+        //获取手机屏幕宽度
         val display = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(display)
         gIntScreenWidth  = display.widthPixels
 
-        /* 设置碎片相对手机实际位置 */
+        //设置碎片相对手机实际位置
         second_check_fragment.x = gIntScreenWidth .toFloat()
         third_check_fragment.x = gIntScreenWidth .toFloat()
 
 
-        /* 碎片实例化 */
+        //碎片实例化
         val signFragment = SignUpFragment.newInstance(gIntScreenWidth , colorDrawable)
         val loginFragment = LoginViaMACFragment.newInstance(gIntScreenWidth , colorDrawable)
 
-        /* 碎片备份 */
+        //碎片备份
         gFragmentSignBat = signFragment
         gFragmentLoginBat = loginFragment
 
-
-        if(checkout()){
-        /* 没有登录记录时调用  replaceFragment(signFragment, R.id.first_check_fragment) 即 SignUpFragment */
+        //动态添加碎片
         replaceFragment(signFragment, R.id.first_check_fragment)
-        }
 
-        else{
-        /* 有登录记录时调用 replaceFragment(loginFragment, R.id.first_check_fragment) 即 LoginViaMACFragment */
-        replaceFragment(loginFragment, R.id.first_check_fragment)
-        }
+//        replaceFragment(loginFragment, R.id.first_check_fragment)
+
+
+
     }
 
-    fun checkout():Boolean{
-        return true
-    }
-    /* 复写返回键 */
+
+    //复写返回键
     override fun onBackPressed() {
         if (gFragmentSignBat!!.pagePosition && gFragmentSignBat!!.requestLoginStatus) {
             gFragmentSignBat?.swap2SignInPageA()
@@ -89,7 +83,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    /* 动态替换碎片 */
+    //动态替换碎片
     fun replaceFragment(fragment: Fragment, viewId: Int) {
         val fragmentManager: FragmentManager = supportFragmentManager
         val transaction = fragmentManager.beginTransaction()
@@ -97,14 +91,14 @@ class MainActivity : AppCompatActivity() {
         transaction.commit()
     }
 
-    /* 设置控件的位置 */
+    //设置控件的位置
     private fun move(view: View, offset:Float){
         val animation = ObjectAnimator.ofFloat(view, "translationX", offset)
         animation.duration = 500
         animation.start()
     }
 
-    /* 获取系统 color 资源 */
+    //获取系统color资源
     private fun getColorByAttributeId(@AttrRes attrIdForColor: Int): Int {
         val typedValue = TypedValue()
         val theme = theme
