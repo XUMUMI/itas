@@ -7,7 +7,6 @@
           <element id="javaee-facet-classes" facet="Client_Server/web/Web" />
           <element id="module-output" name="Client_Server" />
           <element id="library" level="project" name="MacAddress" />
-          <element id="library" level="project" name="SQL_Ctrl" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.5" />

@@ -12,6 +12,11 @@
                 if(mac != null) out.print(gson.toJson(new SignStatus(mac)));
             }break;
 
+            case "viaName": {
+                String userName = request.getParameter("userName");
+                if(userName != null) out.print(gson.toJson(new ViaUserName(userName)));
+            }break;
+
             case "signIn": {
                 String mac = request.getParameter("mac");
                 String password = request.getParameter("password");
