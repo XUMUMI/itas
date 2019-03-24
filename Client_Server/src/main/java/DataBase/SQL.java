@@ -4,7 +4,6 @@ import MacAddress.MacAddress;
 import SQL_Ctrl.SQL_Ctrl;
 
 import java.sql.SQLException;
-import java.util.HashMap;
 import java.util.Map;
 
 public class SQL {
