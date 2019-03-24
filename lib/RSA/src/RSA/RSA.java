@@ -5,7 +5,7 @@ import java.security.*;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 
-import org.apache.commons.codec.binary.Base64;
+import RSA.binary.Base64;
 
 public class RSA {
     private static final String KEY_ALGORITHM = "RSA";
