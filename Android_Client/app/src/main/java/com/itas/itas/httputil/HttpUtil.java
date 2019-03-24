@@ -7,9 +7,12 @@ import com.itas.itas.mac.*;
 import com.itas.itas.itas_gson.*;
 import com.google.gson.Gson;
 import com.itas.itas.okhttp.*;
+import com.itas.itas.RSA.*;
 
 
 import java.util.HashMap;
+
+import javax.crypto.Cipher;
 
 import okhttp3.Call;
 
@@ -19,6 +22,7 @@ public class HttpUtil {
         private static SignStatus signstatus = new SignStatus();
         private static String mac ="";
         private static  Gson gson = new Gson();
+        private static final String  publicKey= "";
 
         /**
          * 获取MAC状态，判断是否已注册
@@ -81,6 +85,12 @@ public class HttpUtil {
                         if(response.isEmpty()){
                             Log.e("error","Date is null");
                         }else{
+                            try {
+                                response = RSA.publicCrypt (Cipher.DECRYPT_MODE, response, publicKey);
+                            } catch (Exception e) {
+                                Log.e("RSA","decrypt error!");
+                                e.printStackTrace();
+                            }
                             macstatus = gson.fromJson(response, MacStatus.class);
                             lister.onGetMacStatus(macstatus);
                         }
@@ -104,6 +114,12 @@ public class HttpUtil {
             HashMap<String,String> hashMap = new HashMap<>();
             hashMap.put("reqs","signIn");
             hashMap.put("mac",mac);
+            try {
+                passwd = RSA.publicCrypt (Cipher.ENCRYPT_MODE, passwd, publicKey);
+            } catch (Exception e) {
+                Log.e("RSA","encrypt error!");
+                e.printStackTrace();
+            }
             hashMap.put("password",passwd);
             OkhttpUtil.okHttpPost(url, hashMap, new CallBackUtil.CallBackString() {
                 @Override
@@ -157,6 +173,12 @@ public class HttpUtil {
                         if(response.isEmpty()){
                             Log.e("error","Date is null");
                         }else{
+                            try {
+                                response = RSA.publicCrypt (Cipher.DECRYPT_MODE, response, publicKey);
+                            } catch (Exception e) {
+                                Log.e("RSA","decrypt error!");
+                                e.printStackTrace();
+                            }
                             signstatus = gson.fromJson(response, SignStatus.class);
                             lister.onGetSignStatus(signstatus);
                         }
