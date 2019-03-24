@@ -18,6 +18,7 @@ public class RSA {
     }
 
     private static String crypt(int mode, String data, KeyFactory keyFactory, Key key) throws Exception {
+        /* If have some problem on Android, cipher use Cipher.getInstance(RSA/ECB/PKCS1Padding) */
         Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
         cipher.init(mode, key);
 
