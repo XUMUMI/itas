@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d4c5b56-ab3b-4474-949f-7834ac8fca73" name="Default Changelist" comment="" />
+    <list default="true" id="1d4c5b56-ab3b-4474-949f-7834ac8fca73" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/RSA.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/RSA_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RSA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RSA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/RSA_jar/RSA_jar.jar" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +24,7 @@
         <entry file="file://$PROJECT_DIR$/src/RSA/RSA.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,8 +74,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="595" />
-    <option name="y" value="-8" />
-    <option name="width" value="432" />
+    <option name="y" value="-9" />
+    <option name="width" value="433" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -84,6 +90,11 @@
             <path>
               <item name="RSA" type="b2602c69:ProjectViewProjectNode" />
               <item name="RSA" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RSA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RSA" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RSA" type="b2602c69:ProjectViewProjectNode" />
@@ -108,10 +119,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3617647" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -168,7 +179,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5123000" />
+    <option name="totallyTimeSpent" value="6859000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -344,7 +355,7 @@
     <entry file="file://$PROJECT_DIR$/src/RSA/RSA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -357,12 +368,11 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>RSA:jar</last-edited>
+          <last-edited>RSA</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.3617647" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
