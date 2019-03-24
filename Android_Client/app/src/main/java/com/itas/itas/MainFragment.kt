@@ -25,7 +25,7 @@ class MainFragment : Fragment() {
         }
     }
 
-    /* LayoutInflater 是用来找 res/layout/ 下的 xml 布局文件，并且实例化；*/
+    //LayoutInflater是用来找res/layout/下的xml布局文件，并且实例化；
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
 
