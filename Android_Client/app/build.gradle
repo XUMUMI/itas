@@ -39,7 +39,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.google.code.gson:gson:2.8.5'
-    implementation files('libs/commons-codec-1.12.jar')
+    implementation files('libs/RSA.jar')
 }
 repositories {
     mavenCentral()
