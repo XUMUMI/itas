@@ -19,6 +19,7 @@ import java.util.regex.Pattern
 class LoginViaMACFragment : Fragment(){
 
     var requestLoginStatus = true
+    val button = ButtonShape()
 
     companion object {
         fun newInstance(width:Int,colorDrawable:Int): LoginViaMACFragment {
@@ -47,7 +48,7 @@ class LoginViaMACFragment : Fragment(){
                 v.removeOnLayoutChangeListener(this)
 
                 val colorDrawable = arguments!!.getInt("colorDrawable")
-                ButtonShape.buttonShape(colorDrawable,user_button,user_progress)
+                button.buttonShape(colorDrawable,user_button,user_progress)
             }
         })
         return loginViaView
@@ -94,7 +95,7 @@ class LoginViaMACFragment : Fragment(){
             val width = user_button.width
             val height = user_button.height
             var requestStatus = true
-            var timeOut = false
+            var timeOut = true
             val userPassword = user_userPassword.text.toString().trim()
 
             if (userPassword.isEmpty()) {
@@ -103,7 +104,7 @@ class LoginViaMACFragment : Fragment(){
 
                 /* 用户密码格式正确调用动画使按钮成加载状态 */
                 user_button.isClickable = false
-                ShrikButtonAnimator.buttonShape(user_button, user_progress, width, height, ButtonShape.buttonDrawable)
+                ShrikButtonAnimator.buttonShape(user_button, user_progress, width, height, button.buttonDrawable)
                 focusAble(false)
 
             /* 接受子线程的信号，判断与服务器的通讯结果:成功或失败 */
@@ -169,7 +170,7 @@ class LoginViaMACFragment : Fragment(){
     private fun requestLoginFail(width:Int,height:Int){
         user_progress.visibility = View.INVISIBLE
         user_button.visibility = View.VISIBLE
-        MagnifyButtonAnimator.buttonShape(user_button,width, height,ButtonShape.buttonDrawable,ButtonShape.buttonDrawableBat)
+        MagnifyButtonAnimator.buttonShape(user_button,width, height,button.buttonDrawable,button.buttonDrawableBat)
         focusAble(true)
 
     }

@@ -18,6 +18,7 @@ import java.util.regex.Pattern
 class LoginFragment : Fragment() {
 
     var requestLoginStatus = true
+    val button = ButtonShape()
 
     companion object {
         fun newInstance(width: Int,colorDrawable:Int): LoginFragment  {
@@ -36,6 +37,8 @@ class LoginFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
 
+
+
         val loginView = inflater.inflate(R.layout.activity_login, container, false)
         val colorDrawable = arguments!!.getInt("colorDrawable")
 
@@ -44,7 +47,7 @@ class LoginFragment : Fragment() {
             override fun onLayoutChange(v: View, left: Int, top: Int, right: Int, bottom: Int, oldLeft: Int, oldTop: Int, oldRight: Int, oldBottom: Int) {
                 v.removeOnLayoutChangeListener(this)
 
-                ButtonShape.buttonShape(colorDrawable,login_button,login_progress)
+                button.buttonShape(colorDrawable,login_button,login_progress)
 
             }
         })
@@ -141,7 +144,7 @@ class LoginFragment : Fragment() {
                     focusAble(false)
 
                     /* 用户密码格式正确调用动画使按钮成加载状态 */
-                    ShrikButtonAnimator.buttonShape(login_button, login_progress, width, height, ButtonShape.buttonDrawable)
+                    ShrikButtonAnimator.buttonShape(login_button, login_progress, width, height, button.buttonDrawable)
 
                     /* 接受子线程的信号，判断与服务器的通讯结果:成功或失败 */
                     val handler = @SuppressLint("HandlerLeak")
@@ -208,13 +211,13 @@ class LoginFragment : Fragment() {
     private fun requestLoginFail(width:Int,height:Int){
         login_progress.visibility = View.INVISIBLE
         login_button.visibility = View.VISIBLE
-        MagnifyButtonAnimator.buttonShape(login_button, width, height,ButtonShape.buttonDrawable,ButtonShape.buttonDrawableBat)
+        MagnifyButtonAnimator.buttonShape(login_button, width, height,button.buttonDrawable,button.buttonDrawableBat)
         focusAble(true)
 
     }
 
     fun requestTimeOutAble():Boolean{
-        return true
+        return false
     }
 
     fun requestSuccessAble():Boolean{

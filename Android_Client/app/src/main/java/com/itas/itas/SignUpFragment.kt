@@ -19,6 +19,8 @@ class SignUpFragment : Fragment() {
     var pagePosition = false
     var requestLoginStatus = true
     var loginFragmentBat : LoginFragment?= null
+    val button1 = ButtonShape()
+    val button2 = ButtonShape()
 
 
     /* kotlin 中修饰静态方法，可用类名.方法名调用，newInstance 可传递数据 */
@@ -53,8 +55,8 @@ class SignUpFragment : Fragment() {
             override fun onLayoutChange(v: View, left: Int, top: Int, right: Int, bottom: Int, oldLeft: Int, oldTop: Int, oldRight: Int, oldBottom: Int){
                 v.removeOnLayoutChangeListener(this)
 
-                ButtonShape.buttonShape(colorDrawable, sign_up_step1_button,progress)
-                ButtonShape.buttonShape(colorDrawable, sign_up_step2_button,progress)
+                button1.buttonShape(colorDrawable, sign_up_step1_button,progress)
+                button2.buttonShape(colorDrawable, sign_up_step2_button,progress)
                 /* 设置注册页的下一步页面相对于手机的实际位置 */
                 sign_up_box2.x = width.toFloat()
                 sign_up_step2_button.x = width.toFloat()
@@ -257,7 +259,7 @@ class SignUpFragment : Fragment() {
             if (userPassword == confirmPassword && confirmPassword != "") {
                 sign_up_step2_button.isClickable = false
                 focusAble(false)
-                ShrikButtonAnimator.buttonShape(sign_up_step2_button, progress, width, height, ButtonShape.buttonDrawable)
+                ShrikButtonAnimator.buttonShape(sign_up_step2_button, progress, width, height, button2.buttonDrawable)
 
                 /* 接受子线程的信号，判断与服务器的通讯结果:成功或失败 */
                 val handler = @SuppressLint("HandlerLeak")
@@ -317,6 +319,7 @@ class SignUpFragment : Fragment() {
         /* 监听“上一步”按钮，实现页面切换动画效果 */
         back_to_sign_up.setOnClickListener {
             swap2SignInPageA()
+       
         }
 
     }
@@ -366,7 +369,7 @@ class SignUpFragment : Fragment() {
     private fun requestLoginFail(width:Int,height:Int){
         progress.visibility = View.INVISIBLE
         sign_up_step2_button.visibility = View.VISIBLE
-        MagnifyButtonAnimator.buttonShape(sign_up_step2_button, width, height, ButtonShape.buttonDrawable,ButtonShape.buttonDrawableBat)
+        MagnifyButtonAnimator.buttonShape(sign_up_step2_button, width, height, button2.buttonDrawable,button2.buttonDrawableBat)
         focusAble(true)
 
     }

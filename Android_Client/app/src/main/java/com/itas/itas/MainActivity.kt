@@ -27,10 +27,10 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         setTheme(Theme.theme1)
-        setContentView(R.layout.activity_main)
+        super.onCreate(savedInstanceState)
 
+        setContentView(R.layout.activity_main)
 
         /* 获取 Button 颜色值 */
         val colorDrawable = getColorByAttributeId(R.attr.colorAccent)
