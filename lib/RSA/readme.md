@@ -1,12 +1,6 @@
 ## RSA  库
 
-#### 依赖
 
-commons-codec-1.12.jar
-
-```java
-import org.apache.commons.codec.binary.Base64;
-```
 
 #### 包名
 
