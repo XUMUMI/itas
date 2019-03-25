@@ -6,7 +6,6 @@
 ```             
 String mac =null;                           
 itas_Mac myMac=new itas_Mac();
-MacAddress MacAddress = new MacAddress(myMac.getMac(context));
+MacAddress MacAddress = new MacAddress(itas_Mac.getNewMac());
 mac = MacAddress.getCont();
 ```
-###  传入context，一般为MainActivity

@@ -39,9 +39,8 @@ public class HttpUtil {
      * @date 2019/3/18 16:56
      */
     private static void setMac(Context context){
-        itas_Mac myMac=new itas_Mac();
         try {
-            MacAddress MacAddress = new MacAddress(myMac.getMac(context));
+            MacAddress MacAddress = new MacAddress(itas_Mac.getNewMac());
             mac = MacAddress.getCont();
             Log.e("MAC",mac);
         } catch (MacFormatException e) {
