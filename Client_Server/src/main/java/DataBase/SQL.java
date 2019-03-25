@@ -10,7 +10,7 @@ public class SQL {
     /* JDBC driver */
     private static SQL_Ctrl jdbc;
     private static final String DRIVER = "org.mariadb.jdbc.Driver";
-    private static final String URL = "jdbc:mariadb://192.168.123.90:3306/itas";
+    private static final String URL = "jdbc:mariadb://localhost:3306/itas";
     private static final String USER = "itas";
     private static final String PASSWORD = "12F05054D059E041DAAC75FA45F45C044E057E5E";
 

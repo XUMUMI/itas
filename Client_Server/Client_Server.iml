@@ -37,7 +37,6 @@
     <orderEntry type="library" exported="" scope="RUNTIME" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.6" level="project" />
     <orderEntry type="library" exported="" scope="RUNTIME" name="Maven: org.bouncycastle:bcprov-jdk15on:1.60" level="project" />
     <orderEntry type="library" exported="" name="Java EE 6-Java EE 6" level="project" />
-    <orderEntry type="library" exported="" name="commons-codec-1.12" level="project" />
-    <orderEntry type="library" exported="" name="RSA" level="project" />
+    <orderEntry type="library" name="RSA" level="project" />
   </component>
 </module>
