@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "F:\\git\\itas\\Android_Client\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v19\\values-v19.xml",
+            "map": [
+                {
+                    "source": "F:\\git\\itas\\Android_Client\\app\\src\\main\\res\\values-v19\\styles.xml",
+                    "from": {
+                        "startLines": "2,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,447",
+                        "endLines": "8,15",
+                        "endColumns": "12,12",
+                        "endOffsets": "441,810"
+                    },
+                    "to": {
+                        "startLines": "2,9",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,446",
+                        "endLines": "8,14",
+                        "endColumns": "12,12",
+                        "endOffsets": "441,809"
+                    }
+                }
+            ]
+        }
+    ]
+}
