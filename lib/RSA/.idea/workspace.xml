@@ -2,11 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d4c5b56-ab3b-4474-949f-7834ac8fca73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/RSA.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/RSA_jar.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/RSA/RSA_Android.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RSA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RSA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/RSA_jar/RSA_jar.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/RSA/RSA.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/RSA/RSA.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/RSA/RSA_12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/BinaryDecoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/BinaryDecoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/BinaryEncoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/BinaryEncoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/CharEncoding.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/CharEncoding.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/Charsets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/Charsets.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/Decoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/Decoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/DecoderException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/DecoderException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/Encoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/Encoder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/EncoderException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/EncoderException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/RSA.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/RSA.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/binary/Base64.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/binary/Base64.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/binary/Base64InputStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/binary/Base64InputStream.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/binary/Base64OutputStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/binary/Base64OutputStream.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/binary/BaseNCodec$Context.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/binary/BaseNCodec$Context.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/binary/BaseNCodec.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/binary/BaseNCodec.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/binary/BaseNCodecInputStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/binary/BaseNCodecInputStream.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/binary/BaseNCodecOutputStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/binary/BaseNCodecOutputStream.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/binary/BinaryCodec.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/binary/BinaryCodec.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/binary/CharSequenceUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/binary/CharSequenceUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RSA/RSA/binary/StringUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RSA/RSA/binary/StringUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RSA/RSA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RSA/RSA.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RSA/RSA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="431">
+              <caret line="20" column="56" lean-forward="true" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,6 +60,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Cipher.getInstance</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -62,21 +87,21 @@
         <option value="$PROJECT_DIR$/src/RSA/BaseNCodecOutputStream.java" />
         <option value="$PROJECT_DIR$/src/RSA/StringUtils.java" />
         <option value="$PROJECT_DIR$/src/RSA/Base32.java" />
-        <option value="$PROJECT_DIR$/src/RSA/RSA.java" />
         <option value="$PROJECT_DIR$/src/org/apache/commons/codec/binary/BaseNCodec.java" />
         <option value="$PROJECT_DIR$/src/org/apache/commons/codec/StringEncoderComparator.java" />
         <option value="$PROJECT_DIR$/src/RSA/StringEncoderComparator.java" />
         <option value="$PROJECT_DIR$/src/RSA/binary/BaseNCodec.java" />
         <option value="$PROJECT_DIR$/src/RSA/binary/BaseNCodecInputStream.java" />
         <option value="$PROJECT_DIR$/src/RSA/binary/BaseNCodecOutputStream.java" />
+        <option value="$PROJECT_DIR$/src/RSA/RSA.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="595" />
-    <option name="y" value="-9" />
-    <option name="width" value="433" />
-    <option name="height" value="1040" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -84,6 +109,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -111,8 +138,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,16 +200,22 @@
       <option name="presentableId" value="Default" />
       <updated>1553349846807</updated>
       <workItem from="1553349850345" duration="2749000" />
+      <workItem from="1553428068809" duration="255000" />
+      <workItem from="1553428388638" duration="5000" />
+      <workItem from="1553428436446" duration="917000" />
+      <workItem from="1553429541287" duration="74000" />
+      <workItem from="1553429819749" duration="70000" />
+      <workItem from="1553429961224" duration="162000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6859000" />
+    <option name="totallyTimeSpent" value="8342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29825738" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3230563" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -354,8 +385,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RSA/RSA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="431">
+          <caret line="20" column="56" lean-forward="true" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
