@@ -1,28 +1,7 @@
 <resources>
-    <string name="app_name">ITAS</string>
-    <string name="log_in">Log in</string>
-    <string name="log_name">User Name</string>
-    <string name="log_password">Password</string>
-    <string name="sig_up">Sign Up</string>
-    <string name="sig_name">User Name (Unchangeable)</string>
-    <string name="sig_email">Email</string>
-    <string name="sig_next">next</string>
-    <string name="sig_password">Set you password</string>
-    <string name="confirm_password">Confirm you password again</string>
-    <string name="sig_done">done</string>
-    <string name="sig_previous">previous</string>
-    <string name="Guides">had account</string>
-    <string name="usr_hint">this is not my account</string>
-    <string name="sig_name_error">Sorry,username must be between 4 and 16 characters long</string>
-    <string name="sig_name_blank">Username can not be blank！</string>
-    <string name="sig_email_blank">Email can not be blank !</string>
-    <string name="sig_email_error">Email is invalid !</string>
-    <string name="sig_pass_error">Password is too long or too short ！(Min is 6 ,Max is 32)</string>
-    <string name="sig_pass_blank">Password can not be blank !</string>
-    <string name="sig_pass_confirm_error">Two passwords are not consistent ！</string>
-    <string name="sig_name_taken">Username is taken !</string>
-    <string name="log_name_error">Username is invalid !</string>
-    <string name="log_pass_error">Password is invalid !</string>
-    <string name="log_error">Incorrect username or password !</string>
-    <string name="tu">tu</string>
+    <string name="app_name">itas</string>
+    <string name="logo">logo</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="error">ERROR</string>
 </resources>

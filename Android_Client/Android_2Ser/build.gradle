@@ -1,0 +1,12 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.google.android:android:4.1.1.4'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.okhttp3:okhttp-ws:3.4.2'
+    implementation files('libs/RSA_Android.jar')
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
