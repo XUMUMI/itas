@@ -8,19 +8,32 @@
         android:fitsSystemWindows="true"
         tools:context=".MainActivity">
     <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
             app:srcCompat="@drawable/ic_itas"
             android:id="@+id/logo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/logo"/>
+            android:contentDescription="@string/logo"
+            android:transitionName="@string/logo"
+            android:visibility="invisible"/>
+    <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_logo"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            app:lottie_rawRes="@raw/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_loop="false"
+            app:lottie_autoPlay="true"/>
     <Button
             android:text="@string/error"
             android:layout_width="match_parent"
-            android:id="@+id/signButton"
+            android:id="@+id/startButton"
             android:layout_height="100dp"
             android:background="@drawable/big_button"
             android:textAppearance="@style/TextAppearance.AppCompat"

@@ -10,24 +10,15 @@ import com.xumumi.itas.animator.Loading
 
 class DoSign(
     private val context: Context,
-    private val map: HashMap<String, View>
+    private val viewMap: HashMap<String, View>
 ): HttpStatusLister {
     override fun onGetMacStatus(macStatus: MacStatus?) {
-        val animator = Loading(context, map)
-        if (macStatus != null) {
-            if(macStatus.status == 0) animator.signIn()
-            else if(macStatus.status == 1) animator.signUp()
-        } else {
-            animator.error()
+        val animator = Loading(context, viewMap, macStatus!!.userName)
+        when(macStatus.status){
+            statusCode.SIGN_IN.code -> animator.signIn()
+            statusCode.SIGN_UP.code -> animator.signUp()
         }
     }
-
-    override fun onGetLoginStatus(loginStatus: LoginStatus?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun onGetSignStatus(signStatus: SignStatus?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
+    override fun onGetLoginStatus(loginStatus: LoginStatus?) = TODO("not implemented")
+    override fun onGetSignStatus (signStatus : SignStatus ?) = TODO("not implemented")
 }
