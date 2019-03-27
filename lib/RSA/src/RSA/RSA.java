@@ -5,7 +5,7 @@ import java.security.*;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 
-import org.apache.commons.codec.binary.Base64;
+import RSA.binary.Base64;
 
 public class RSA {
     private static final String KEY_ALGORITHM = "RSA";
@@ -18,6 +18,7 @@ public class RSA {
     }
 
     private static String crypt(int mode, String data, KeyFactory keyFactory, Key key) throws Exception {
+        /* If have some problem on Android, cipher use Cipher.getInstance(RSA/ECB/PKCS1Padding) */
         Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
         cipher.init(mode, key);
 
