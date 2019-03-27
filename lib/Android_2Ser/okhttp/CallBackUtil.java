@@ -1,4 +1,4 @@
-package com.itas.itas.okhttp;
+package com.example.a27707.mycall.okhttp;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -37,7 +37,7 @@ public abstract class CallBackUtil<T> {
         mMainHandler.post(new Runnable() {
             @Override
             public void run() {
-                onResponse(obj);
+                onResponse(obj,response);
             }
         });
     };
@@ -57,7 +57,7 @@ public abstract class CallBackUtil<T> {
      *
      * 访问网络成功后被调用，执行在UI线程
      */
-    public abstract void onResponse(T response);
+    public abstract void onResponse(T responseStr,Response response);
 
 
     public static abstract class CallBackDefault extends CallBackUtil<Response>{

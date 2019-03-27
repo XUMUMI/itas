@@ -1,4 +1,4 @@
-package com.itas.itas.itas_gson;
+package com.example.a27707.mycall.itas_Gson;
 
 /**
  * @author Teoan

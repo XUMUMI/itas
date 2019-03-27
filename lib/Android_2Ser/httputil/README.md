@@ -25,7 +25,7 @@
 
 发起mac的http请求
 ```java
-HttpUtil.judgeMAC("http://192.168.123.90:8080/Client/",MainActivity.this,lister);
+HttpUtil.judgeMAC("http://192.168.123.90:8080/Client/",lister);
 ```
 
 发起Login的http请求

@@ -1,4 +1,4 @@
-package com.itas.itas.itas_gson;
+package com.example.a27707.mycall.itas_Gson;
 
 /**
  * @author Teoan
@@ -15,7 +15,7 @@ public class MacStatus {
      */
 
     private int status =1;
-    private String userName;
+    private String userName = null;
 
     public int getStatus() {
         return status;

@@ -1,4 +1,4 @@
-package com.itas.itas.okhttp;
+package com.example.a27707.mycall.okhttp;
 
 import android.text.TextUtils;
 
@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -81,7 +82,8 @@ class RequestUtil {
      * 创建OKhttpClient实例。
      */
     private void getInstance(){
-        mOkHttpClient = new OkHttpClient();
+        mOkHttpClient = new OkHttpClient.Builder().connectTimeout(3, TimeUnit.SECONDS).
+                readTimeout(3,TimeUnit.SECONDS).writeTimeout(3,TimeUnit.SECONDS).build();
         mRequestBuilder = new Request.Builder();
         if(mFile != null || mfileList != null || mfileMap != null){//先判断是否有文件，
             setFile();

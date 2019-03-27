@@ -1,6 +1,6 @@
-package com.itas.itas.httputil;
+package com.example.a27707.mycall.HttpUtil;
 
-import com.itas.itas.itas_gson.*;
+import com.example.a27707.mycall.itas_Gson.*;
 
 /**
  * @author Teoan

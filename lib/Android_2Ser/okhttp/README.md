@@ -17,114 +17,102 @@
 
 ## 使用示例
 ### GET请求
-```java
-String url = "https://www.baidu.com/";
-OkhttpUtil.okHttpGet(url, new CallBackUtil.CallBackString() {
-    @Override
-    public void onFailure(Call call, Exception e) {}
+    String url = "https://www.baidu.com/";
+    OkhttpUtil.okHttpGet(url, new CallBackUtil.CallBackString() {
+        @Override
+        public void onFailure(Call call, Exception e) {}
 
-    @Override
-    public void onResponse(String response) {
-        Toast.makeText(MainActivity.this,"Success",Toast.LENGTH_SHORT).show();
-        Log.d("kwwl",response);
-    }
-});
-```
+        @Override
+        public void onResponse(String response) {
+            Toast.makeText(MainActivity.this,"Success",Toast.LENGTH_SHORT).show();
+            Log.d("kwwl",response);
+        }
+    });
 ### POST请求
-```java
-String url = "https://www.baidu.com/";
-HashMap<String, String> paramsMap = new HashMap<>();
-paramsMap.put("title","title");
-OkhttpUtil.okHttpPost(url, paramsMap, new CallBackUtil.CallBackString() {
-    @Override
-    public void onFailure(Call call, Exception e) {
+    String url = "https://www.baidu.com/";
+    HashMap<String, String> paramsMap = new HashMap<>();
+    paramsMap.put("title","title");
+    OkhttpUtil.okHttpPost(url, paramsMap, new CallBackUtil.CallBackString() {
+        @Override
+        public void onFailure(Call call, Exception e) {
 
-    }
+        }
 
-    @Override
-    public void onResponse(String response) {
+        @Override
+        public void onResponse(String response) {
 
-    }
-});
-```
+        }
+    });
 
 ### PUT请求
-```java
-String url = "https://www.baidu.com/";
-HashMap<String, String> paramsMap = new HashMap<>();
-paramsMap.put("title","title");
-OkhttpUtil.okHttpPut(url, paramsMap, new CallBackUtil.CallBackString() {
-    @Override
-    public void onFailure(Call call, Exception e) {
+    String url = "https://www.baidu.com/";
+    HashMap<String, String> paramsMap = new HashMap<>();
+    paramsMap.put("title","title");
+    OkhttpUtil.okHttpPut(url, paramsMap, new CallBackUtil.CallBackString() {
+        @Override
+        public void onFailure(Call call, Exception e) {
 
-    }
+        }
 
-    @Override
-    public void onResponse(String response) {
+        @Override
+        public void onResponse(String response) {
 
-    }
-});
-```
+        }
+    });
 
 ### DELETE请求
-```java
-String url = "https://www.baidu.com/";
-HashMap<String, String> paramsMap = new HashMap<>();
-paramsMap.put("title","title");
-OkhttpUtil.okHttpDelete(url, paramsMap, new CallBackUtil.CallBackString() {
-    @Override
-    public void onFailure(Call call, Exception e) {
+    String url = "https://www.baidu.com/";
+    HashMap<String, String> paramsMap = new HashMap<>();
+    paramsMap.put("title","title");
+    OkhttpUtil.okHttpDelete(url, paramsMap, new CallBackUtil.CallBackString() {
+        @Override
+        public void onFailure(Call call, Exception e) {
 
-    }
+        }
 
-    @Override
-    public void onResponse(String response) {
+        @Override
+        public void onResponse(String response) {
 
-    }
-});
-```
+        }
+    });
 
 ### 上传文件
-```java
-File file = new File(Environment.getExternalStorageDirectory()+"/kwwl/abc.jpg");
-HashMap<String, String> paramsMap = new HashMap<>();
-paramsMap.put("title","title");
-OkhttpUtil.okHttpUploadFile(url, file, "image", OkhttpUtil.FILE_TYPE_IMAGE, paramsMap, new CallBackUtil.CallBackString() {
-    @Override
-    public void onFailure(Call call, Exception e) {
+    File file = new File(Environment.getExternalStorageDirectory()+"/kwwl/abc.jpg");
+    HashMap<String, String> paramsMap = new HashMap<>();
+    paramsMap.put("title","title");
+    OkhttpUtil.okHttpUploadFile(url, file, "image", OkhttpUtil.FILE_TYPE_IMAGE, paramsMap, new CallBackUtil.CallBackString() {
+        @Override
+        public void onFailure(Call call, Exception e) {
 
-    }
+        }
 
-    @Override
-    public void onProgress(float progress, long total) {
+        @Override
+        public void onProgress(float progress, long total) {
 
-    }
+        }
 
-    @Override
-    public void onResponse(String response) {
+        @Override
+        public void onResponse(String response) {
 
-    }
-});
-```
+        }
+    });
 
 ### 下载文件
-```java
-OkhttpUtil.okHttpDownloadFile("url", new CallBackUtil.CallBackFile("fileDir","fileName") {
-    @Override
-    public void onFailure(Call call, Exception e) {
+    OkhttpUtil.okHttpDownloadFile("url", new CallBackUtil.CallBackFile("fileDir","fileName") {
+        @Override
+        public void onFailure(Call call, Exception e) {
 
-    }
+        }
 
-    @Override
-    public void onProgress(float progress, long total) {
-    }
+        @Override
+        public void onProgress(float progress, long total) {
+        }
 
-    @Override
-    public void onResponse(File response) {
+        @Override
+        public void onResponse(File response) {
 
-    }
-});
-```
+        }
+    });
 
 
 
