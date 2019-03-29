@@ -111,24 +111,24 @@ public class HttpUtil {
         /**
          * @description: 登陆函数  加密后发送给服务器
          * @param url 服务器地址
-         * @param passwd 密码
+         * @param password 密码
          * @return 成功登录loginstatus.getStatus()返回1;失败loginstatus.getStatus()返回0;超时loginstatus.getStatus()返回2 连接异常loginstatus.getStatus()返回3
          * @throws
          * @author Teoan
          * @date 2019/3/17 21:55
          */
-        public static void login(String url, String passwd,HttpStatusLister lister){
+        public static void login(String url, String password,HttpStatusLister lister){
             if (mac.equals("")) getMac();
             HashMap<String,String> hashMap = new HashMap<>();
             hashMap.put("reqs","signIn");
             hashMap.put("mac",mac);
             try {
-                passwd = RSA.publicCrypt (Cipher.ENCRYPT_MODE, passwd, publicKey);
+                password = RSA.publicCrypt (Cipher.ENCRYPT_MODE, password, publicKey);
             } catch (Exception e) {
                 Log.d("RSA","encrypt error!");
                 e.printStackTrace();
             }
-            hashMap.put("password",passwd);
+            hashMap.put("password",password);
             OkhttpUtil.okHttpPost(url, hashMap, new CallBackUtil.CallBackString() {
                 @Override
                 public void onFailure(Call call, Exception e) {
@@ -169,24 +169,24 @@ public class HttpUtil {
          * @description 注册新用户
          * @param url 服务器地址
          * @param userName 用户名
-         * @param passwd 密码
+         * @param password 密码
          * @return 成功登录signstauts.getStatus()返回1;失败signstauts.getStatus()返回0;连接超时signstauts.getStatus()返回2 连接异常signstauts.getStatus()返回3
          * @throws
          * @author Teoan
          * @date 2019/3/17 22:13
          */
-        public static void sign(String url, String passwd, String userName,HttpStatusLister lister){
+        public static void signUp(String url, String userName, String password ,HttpStatusLister lister){
             if (mac.equals("")) getMac();
             HashMap<String,String> hashMap = new HashMap<>();
             hashMap.put("reqs","signUp");
             hashMap.put("mac",mac);
             try {
-                passwd = RSA.publicCrypt (Cipher.ENCRYPT_MODE, passwd, publicKey);
+                password = RSA.publicCrypt (Cipher.ENCRYPT_MODE, password, publicKey);
             } catch (Exception e) {
                 Log.d("RSA","encrypt error!");
                 e.printStackTrace();
             }
-            hashMap.put("password",passwd);
+            hashMap.put("password",password);
             hashMap.put("userName",userName);
             OkhttpUtil.okHttpPost(url, hashMap, new CallBackUtil.CallBackString() {
                 @Override
