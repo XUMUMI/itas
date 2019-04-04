@@ -132,15 +132,7 @@ public class SQL_Ctrl {
         try {
             SQL_Ctrl sql_ctrl=new SQL_Ctrl("org.mariadb.jdbc.Driver","jdbc:mysql://192.168.123.90/itas",
                     "itas","12F05054D059E041DAAC75FA45F45C044E057E5E");
-//            ArrayList<String> str=new ArrayList<String>();
-//            str.add("AP_ID");
-//            str.add("USER_ID");
-//            str.add("LAST_TIME");
-//            str.add("SIG");
-            sql_ctrl.update("T_USER_INFO", Map.of("PHONE", "'10086'", "ID", "'1'"), "WHERE ID = 1");
-//            System.out.println( sql_ctrl.select("T_USER_AP","AP_ID","WHERE ID=1"));
-            //  while(rs.next())
-            //    System.out.println(rs.getInt(1)+" "+rs.getInt(2)+" "+ rs.getTimestamp(3)+" "+rs.getInt(4));
+            System.out.println(sql_ctrl.select("PASSWORD('test')"));
         } catch(ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         } 
