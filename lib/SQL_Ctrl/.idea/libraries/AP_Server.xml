@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="AP_Server">
-    <CLASSES>
-      <root url="file://$PROJECT_DIR$/../AP_Server/out/production/AP_Server" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
