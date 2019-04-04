@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebad920e-7105-4c57-9145-87aedb664adb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mariadb_jdbc_mariadb_java_client_2_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/AP_Server.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Log.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Log.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mariadb_java_client_2_2_5.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SQL_Ctrl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SQL_Ctrl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SQL_Ctrl/SQL_Ctrl/SQL_Ctrl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SQL_Ctrl/SQL_Ctrl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SQL_Ctrl/SQL_Ctrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SQL_Ctrl/SQL_Ctrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SQL_Ctrl/SQL_Ctrl.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,10 +24,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/SQL_Ctrl/SQL_Ctrl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="71" column="55" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
+            <state relative-caret-position="312">
+              <caret line="136" column="32" lean-forward="true" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
               <folding>
-                <element signature="e#0#4861#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -72,8 +64,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="615" />
     <option name="y" value="-10" />
-    <option name="width" value="918" />
-    <option name="height" value="1039" />
+    <option name="width" value="919" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -81,6 +73,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -96,7 +89,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -149,16 +141,17 @@
       <workItem from="1552898627382" duration="8000" />
       <workItem from="1553074200237" duration="6440000" />
       <workItem from="1554387951805" duration="417000" />
+      <workItem from="1554388663042" duration="372000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11916000" />
+    <option name="totallyTimeSpent" value="12288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1997319" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20241287" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -223,10 +216,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/SQL_Ctrl/SQL_Ctrl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="71" column="55" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
+        <state relative-caret-position="312">
+          <caret line="136" column="32" lean-forward="true" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
           <folding>
-            <element signature="e#0#4861#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -241,7 +233,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.3617647" />
               </list>
             </option>
           </splitter-proportions>
@@ -264,7 +256,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.3617647" />
               </list>
             </option>
           </splitter-proportions>
@@ -272,10 +264,11 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.3617647" />
               </list>
             </option>
           </splitter-proportions>
@@ -288,7 +281,6 @@
             <option name="proportions">
               <list>
                 <option value="0.3617647" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
