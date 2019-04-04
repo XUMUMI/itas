@@ -11,7 +11,7 @@
     In input = new In(request);
 
     String reqs = request.getParameter("reqs");
-    if(reqs != null){
+    if(reqs != null)
         switch (reqs){
             case "ident": {
                 String mac = request.getParameter("mac");
@@ -40,6 +40,13 @@
                 }
             }break;
 
-        }
+            case "checkInLog": {
+                String userName = request.getParameter("userName");
+                String password = input.get("password");
+                if(userName != null && password != null) {
+                    output.print(gson.toJson(new CheckInLog(userName, password)));
+                }
+
+            }break;
     }
 %>

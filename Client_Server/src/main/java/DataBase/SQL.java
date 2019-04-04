@@ -3,7 +3,11 @@ package DataBase;
 import MacAddress.MacAddress;
 import SQL_Ctrl.SQL_Ctrl;
 
+import java.sql.Array;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Map;
 
 public class SQL {
@@ -22,14 +26,14 @@ public class SQL {
         return jdbc.select(
                 "T_USER_INFO",
                 "USER_NAME",
-                "WHERE MAC = '" + macAddress.getCont() + "'");
+                "WHERE `MAC` = '" + macAddress.getCont() + "'");
     }
 
     public String signIn(MacAddress macAddress, String password) throws SQLException {
         return jdbc.select(
                 "T_USER_INFO",
                 "USER_NAME",
-                "WHERE MAC = '" + macAddress.getCont() + "' "
+                "WHERE `MAC` = '" + macAddress.getCont() + "' "
                         + "AND `PASSWORD` = PASSWORD('" + password + "')");
     }
 
@@ -53,8 +57,34 @@ public class SQL {
                 jdbc.select(
                         "T_USER_INFO",
                         "USER_NAME",
-                        "WHERE USER_NAME = '" + userName + "'")
+                        "WHERE `USER_NAME` = '" + userName + "'")
                         != null
+        );
+    }
+
+    public int getUID(String userName, String password) throws SQLException {
+        String sid = jdbc.select(
+                "T_USER_INFO",
+                "ID",
+                "WHERE `USER_NAME` = '" + userName
+                        + "' AND `PASSWORD` = '" + password + "'"
+        );
+        return sid != null ? Integer.parseInt(sid) : 0;
+    }
+
+    public ResultSet getAct(int UID) {
+        ArrayList<String> list =
+                new ArrayList<>(Arrays.asList(
+                        "T_USER_ACTIVITY.ACTIVITY_ID",
+                        "T_ACTIVITY_LOG.CHECK_IN"
+                ));
+        return jdbc.select(
+                "T_ACTIVITY_LOG " +
+                        "INNER JOIN T_USER_ACTIVITY " +
+                        "ON T_ACTIVITY_LOG.UAID = T_USER_ACTIVITY.ID",
+                list,
+                "T_ACTIVITY_LOG.UAID = T_USER_ACTIVITY.ID " +
+                        "AND T_USER_ACTIVITY.USER_ID = " + UID
         );
     }
 
