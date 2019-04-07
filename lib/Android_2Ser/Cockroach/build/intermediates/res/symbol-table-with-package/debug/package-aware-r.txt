@@ -1,0 +1,2 @@
+com.wanjian.cockroach
+string app_name

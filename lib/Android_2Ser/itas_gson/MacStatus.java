@@ -14,7 +14,7 @@ public class MacStatus {
      * userName : Teoan-Xiaomi2
      */
 
-    private int status =1;
+    private int status =-1;
     private String userName = null;
 
     public int getStatus() {

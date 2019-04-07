@@ -11,23 +11,29 @@ import com.example.a27707.mycall.itas_Gson.*;
  */
 public interface HttpStatusLister {
     /**
-     * 当成功获取到MacStatus类时
+     * 当成功获取到MacStatus类时回调
      */
     void onGetMacStatus(MacStatus macStatus);
 
     /**
-     * 当成功获取到LoginStatus类时
+     * 当成功获取到LoginStatus类时回调
      */
     void onGetLoginStatus(LoginStatus loginStatus);
 
 
     /**
-     * 当成功获取到SignStatus类时
+     * 当成功获取到SignStatus类时回调
      */
     void onGetSignStatus(SignStatus signStatus);
 
+    /**
+     * 当成功获取到活动信息时回调
+     */
+    void onGetActInfo(ActinfoStatus actinfoStatus);
 
-
-
+    /**
+     * 当成功获取到活动信息时回调
+     */
+    void onGetCheckinLog(CheckInLogStatus checkInLogStatus);
 
 }
