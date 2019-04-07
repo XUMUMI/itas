@@ -2,40 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebad920e-7105-4c57-9145-87aedb664adb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Client_Server/src/main/java/Inquiry/SignStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lib/Log/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lib/MacAddress/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lib/MacAddress/src/MacAddress/MacFormatException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AP_Server/.idea/libraries/SQL_Ctrl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AP_Server/.idea/libraries/SQL_Ctrl.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AP_Server/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AP_Server/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AP_Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AP_Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AP_Server/AP_Server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../AP_Server/AP_Server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AP_Server/out/production/AP_Server/APServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AP_Server/out/production/AP_Server/APServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AP_Server/out/production/AP_Server/APServerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AP_Server/out/production/AP_Server/APServerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AP_Server/out/production/AP_Server/W2db.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AP_Server/out/production/AP_Server/W2db.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AP_Server/out/production/AP_Server/serThr.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AP_Server/out/production/AP_Server/serThr.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AP_Server/src/APServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AP_Server/src/APServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AP_Server/src/APServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AP_Server/src/APServerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AP_Server/src/W2db.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AP_Server/src/W2db.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SQL_Ctrl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SQL_Ctrl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SQL_Ctrl/SQL_Ctrl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SQL_Ctrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SQL_Ctrl/SQL_Ctrl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/Log/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/Log/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/Log/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/Log/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/Log/Log.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/Log/Log.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/Log/out/production/Log/Log.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/Log/src/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/Log/src/Log/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/MacAddress/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/MacAddress/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/MacAddress/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/MacAddress/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/MacAddress/MacAddress.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/MacAddress/MacAddress.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/MacAddress/out/production/MacAddress/MacAddress.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/MacAddress/out/production/MacAddress/MacFormatException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lib/MacAddress/src/MacAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/MacAddress/src/MacAddress/MacAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SQL_Ctrl/SQL_Ctrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SQL_Ctrl/SQL_Ctrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SQL_Ctrl/SQL_Ctrl.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,10 +22,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SQL_Ctrl/SQL_Ctrl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SQL_Ctrl/SQL_Ctrl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="101" column="19" selection-start-line="101" selection-start-column="19" selection-end-line="101" selection-end-column="19" />
+            <state relative-caret-position="312">
+              <caret line="136" column="32" lean-forward="true" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,7 +41,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -75,21 +49,30 @@
         <option value="$PROJECT_DIR$/src/SQL_Ctrl.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/SQL_Ctrl/SQL_Ctrl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/SQL_Ctrl/SQL_Ctrl.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="616" />
-    <option name="y" value="-9" />
-    <option name="width" value="917" />
-    <option name="height" value="1038" />
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="615" />
+    <option name="y" value="-10" />
+    <option name="width" value="919" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -98,20 +81,26 @@
               <item name="SQL_Ctrl" type="b2602c69:ProjectViewProjectNode" />
               <item name="SQL_Ctrl" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SQL_Ctrl" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Log/out/production/Log" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3617647" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -127,6 +116,8 @@
   </component>
   <component name="RunManager">
     <configuration name="SQL_Ctrl" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="12" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="SQL_Ctrl.SQL_Ctrl" />
       <module name="SQL_Ctrl" />
       <method v="2">
@@ -149,17 +140,18 @@
       <workItem from="1552882749412" duration="2867000" />
       <workItem from="1552898627382" duration="8000" />
       <workItem from="1553074200237" duration="6440000" />
+      <workItem from="1554387951805" duration="417000" />
+      <workItem from="1554388663042" duration="372000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11499000" />
+    <option name="totallyTimeSpent" value="12288000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26340482" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20241287" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -178,7 +170,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.09065156" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.22804533" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -193,6 +185,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -201,24 +198,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.sql/java/sql/Connection.java">
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.sql/java/sql/Connection.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.sql/java/sql/Statement.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
+        <state relative-caret-position="274">
+          <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.sql/java/sql/Statement.java">
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/java.sql/java/sql/Statement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
+        <state relative-caret-position="149">
           <caret line="357" column="12" selection-start-line="357" selection-start-column="12" selection-end-line="357" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SQL_Ctrl/SQL_Ctrl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/SQL_Ctrl/SQL_Ctrl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="101" column="19" selection-start-line="101" selection-start-column="19" selection-end-line="101" selection-end-column="19" />
+        <state relative-caret-position="312">
+          <caret line="136" column="32" lean-forward="true" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -234,7 +233,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.3617647" />
               </list>
             </option>
           </splitter-proportions>
@@ -257,7 +256,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.3617647" />
               </list>
             </option>
           </splitter-proportions>
@@ -265,10 +264,11 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.3617647" />
               </list>
             </option>
           </splitter-proportions>
@@ -281,7 +281,6 @@
             <option name="proportions">
               <list>
                 <option value="0.3617647" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -289,7 +288,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>AP_Server</last-edited>
+          <last-edited>Log</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

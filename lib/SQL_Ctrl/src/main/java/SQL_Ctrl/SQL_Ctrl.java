@@ -1,4 +1,4 @@
-/**
+/*
  * FileName: SQL_Ctrl.java
  * Implement the operation of the database
  *
@@ -14,8 +14,8 @@
  * @作者      Teoan
  * @创建时间  07/19/2018
  * @编辑      XUMUMI
- * @编辑时间  07/21/2018
- **/
+ * @编辑时间  04/04/2019
+ */
 
 package SQL_Ctrl;
 
@@ -69,7 +69,7 @@ public class SQL_Ctrl {
 
     /* select data from a table & return ResultSet
      * 从表中获取记录并返回结果集 */
-     ResultSet select(String tableName, ArrayList<String> list, String condition) throws SQLException {
+     public ResultSet select(String tableName, ArrayList<String> list, String condition) throws SQLException {
         StringBuilder selectSql = new StringBuilder("SELECT ");
         for(String str: list){
             selectSql.append(str).append(", ");
@@ -128,19 +128,11 @@ public class SQL_Ctrl {
     }
 
     public static void main(String[] args){
-        ResultSet rs=null;
+        ResultSet rs = null;
         try {
             SQL_Ctrl sql_ctrl=new SQL_Ctrl("org.mariadb.jdbc.Driver","jdbc:mysql://192.168.123.90/itas",
                     "itas","12F05054D059E041DAAC75FA45F45C044E057E5E");
-//            ArrayList<String> str=new ArrayList<String>();
-//            str.add("AP_ID");
-//            str.add("USER_ID");
-//            str.add("LAST_TIME");
-//            str.add("SIG");
-            sql_ctrl.update("T_USER_INFO", Map.of("PHONE", "'10086'", "ID", "'1'"), "WHERE ID = 1");
-//            System.out.println( sql_ctrl.select("T_USER_AP","AP_ID","WHERE ID=1"));
-            //  while(rs.next())
-            //    System.out.println(rs.getInt(1)+" "+rs.getInt(2)+" "+ rs.getTimestamp(3)+" "+rs.getInt(4));
+            System.out.println(sql_ctrl.select("PASSWORD('test')"));
         } catch(ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         } 
