@@ -1,5 +1,6 @@
 package DataBase;
 
+import IO.Out;
 import MacAddress.MacAddress;
 import SQL_Ctrl.SQL_Ctrl;
 
@@ -67,23 +68,40 @@ public class SQL {
                 "T_USER_INFO",
                 "ID",
                 "WHERE `USER_NAME` = '" + userName
-                        + "' AND `PASSWORD` = '" + password + "'"
+                        + "' AND `PASSWORD` = PASSWORD('" + password + "')"
         );
         return sid != null ? Integer.parseInt(sid) : 0;
     }
 
-    public ResultSet getAct(int UID) {
-        ArrayList<String> list =
-                new ArrayList<>(Arrays.asList(
-                        "T_USER_ACTIVITY.ACTIVITY_ID",
-                        "T_ACTIVITY_LOG.CHECK_IN"
-                ));
+    public ResultSet getAct(int UID) throws SQLException{
+        ArrayList<String> list = new ArrayList<>(Arrays.asList(
+                "T_ACTIVITY_INFO.ID",
+                "T_ACTIVITY_INFO.`NAME`",
+                "T_ACTIVITY_INFO.LOCATION",
+                "T_ACTIVITY_INFO.START_DATE",
+                "T_ACTIVITY_INFO.END_DATE",
+                "T_ACTIVITY_INFO.START_TIME",
+                "T_ACTIVITY_INFO.END_TIME",
+                "T_ACTIVITY_INFO.`REPEAT`"
+        ));
+        return jdbc.select(
+                "T_ACTIVITY_INFO INNER JOIN T_USER_ACTIVITY ON T_USER_ACTIVITY.ACTIVITY_ID = T_ACTIVITY_INFO.ID",
+                list,
+                "WHERE T_USER_ACTIVITY.USER_ID = " + UID
+        );
+    }
+
+    public ResultSet getActLog(int UID) throws SQLException {
         return jdbc.select(
                 "T_ACTIVITY_LOG " +
                         "INNER JOIN T_USER_ACTIVITY " +
                         "ON T_ACTIVITY_LOG.UAID = T_USER_ACTIVITY.ID",
-                list,
-                "T_ACTIVITY_LOG.UAID = T_USER_ACTIVITY.ID " +
+                new ArrayList<>(Arrays.asList(
+                        "T_USER_ACTIVITY.ACTIVITY_ID",
+                        "T_ACTIVITY_LOG.CHECK_IN",
+                        "T_ACTIVITY_LOG.TIME"
+                )),
+                "WHERE T_ACTIVITY_LOG.UAID = T_USER_ACTIVITY.ID " +
                         "AND T_USER_ACTIVITY.USER_ID = " + UID
         );
     }

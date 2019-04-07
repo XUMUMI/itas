@@ -40,13 +40,20 @@
                 }
             }break;
 
+            case "getActInfo": {
+                String userName = request.getParameter("userName");
+                String password = input.get("password");
+                if(userName != null && password != null) {
+                    output.print(gson.toJson(new CheckInAct(userName, password)));
+                }
+            }break;
+
             case "checkInLog": {
                 String userName = request.getParameter("userName");
                 String password = input.get("password");
                 if(userName != null && password != null) {
                     output.print(gson.toJson(new CheckInLog(userName, password)));
                 }
-
             }break;
-    }
+        }
 %>

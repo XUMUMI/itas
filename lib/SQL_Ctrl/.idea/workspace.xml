@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebad920e-7105-4c57-9145-87aedb664adb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL_Ctrl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SQL_Ctrl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SQL_Ctrl/SQL_Ctrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SQL_Ctrl/SQL_Ctrl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SQL_Ctrl/SQL_Ctrl.class" beforeDir="false" />
-    </list>
+    <list default="true" id="ebad920e-7105-4c57-9145-87aedb664adb" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/SQL_Ctrl/SQL_Ctrl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="136" column="32" lean-forward="true" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
+            <state relative-caret-position="403">
+              <caret line="133" column="32" selection-start-line="133" selection-start-column="32" selection-end-line="133" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,7 +58,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="615" />
     <option name="y" value="-10" />
-    <option name="width" value="919" />
+    <option name="width" value="920" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -73,7 +67,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -89,7 +83,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -142,16 +136,18 @@
       <workItem from="1553074200237" duration="6440000" />
       <workItem from="1554387951805" duration="417000" />
       <workItem from="1554388663042" duration="372000" />
+      <workItem from="1554389113240" duration="14000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12288000" />
+    <option name="totallyTimeSpent" value="12302000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20241287" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20509383" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -216,8 +212,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/SQL_Ctrl/SQL_Ctrl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="136" column="32" lean-forward="true" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
+        <state relative-caret-position="403">
+          <caret line="133" column="32" selection-start-line="133" selection-start-column="32" selection-end-line="133" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
