@@ -2,7 +2,9 @@ package com.example.a27707.mycall.itas_Gson;
 
 import android.annotation.SuppressLint;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -13,9 +15,9 @@ import java.util.List;
  * @description: 描述
  * @date 2019/4/714:59
  */
-public class CheckInLogStatus {
+public class CheckInLogStatus implements Serializable {
     private int status=-1;
-    private List<CheckInLog> actLog = null;
+    private ArrayList<CheckInLog> actLog = null;
 
     public int getStatus() {
         return status;
@@ -25,12 +27,12 @@ public class CheckInLogStatus {
         this.status = status;
     }
 
-    public List<CheckInLog> getCheckInLogs() {
-        return actLog;
+    public void setActLogs(ArrayList<CheckInLog> actLogs) {
+        this.actLog = actLogs;
     }
 
-    public void setCheckInLogs(List<CheckInLog> checkInLogs) {
-        this.actLog = checkInLogs;
+    public ArrayList<CheckInLog> getActLogs() {
+        return actLog;
     }
 
     public static class CheckInLog {
@@ -41,7 +43,7 @@ public class CheckInLogStatus {
          */
 
         private int ID;
-        private String log;
+        private int log;
         private long time;
 
         public int getID() {
@@ -52,11 +54,11 @@ public class CheckInLogStatus {
             this.ID = ID;
         }
 
-        public String getLog() {
+        public int getLog() {
             return log;
         }
 
-        public void setLog(String log) {
+        public void setLog(int log) {
             this.log = log;
         }
 

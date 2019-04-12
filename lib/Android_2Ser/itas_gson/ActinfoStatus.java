@@ -3,6 +3,7 @@ package com.example.a27707.mycall.itas_Gson;
 import android.annotation.SuppressLint;
 import android.provider.ContactsContract;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -15,7 +16,7 @@ import java.util.List;
  * @description: 描述
  * @date 2019/4/521:41
  */
-public class ActinfoStatus {
+public class ActinfoStatus implements Serializable {
     private int status =-1;
     private List<ActInfo> act =null;
     private  HashMap<Integer,ActInfo> actInfoHashMap =new HashMap<>() ;
@@ -65,6 +66,7 @@ public class ActinfoStatus {
 
         private int ID;
         private String name;
+        private String location;
         private long startDate;
         private long endDate;
         private long startTime;
@@ -86,6 +88,15 @@ public class ActinfoStatus {
         public void setName(String name) {
             this.name = name;
         }
+
+        public String getLocation() {
+            return location;
+        }
+
+        public void setLocation(String location) {
+            this.location = location;
+        }
+
         //获取各种格式时间 pattern ="yyyy-MM-dd hh:mm:ss"
         public String getStartDate(String pattern) {
             @SuppressLint("SimpleDateFormat") SimpleDateFormat df=new SimpleDateFormat(pattern);
