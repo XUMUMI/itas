@@ -15,18 +15,22 @@ public class CheckInAct {
                 int UID = sql.getUID(userName, password);
                 if(UID != 0){
                     ResultSet resultSet = sql.getAct(UID);
-                    while (resultSet.next()){
-                        act.add(new Activity(
-                                resultSet.getInt      ("ID"),
-                                resultSet.getString   ("NAME"),
-                                resultSet.getString   ("LOCATION"),
-                                resultSet.getDate     ("START_DATE"),
-                                resultSet.getDate     ("END_DATE"),
-                                resultSet.getTimestamp("START_TIME"),
-                                resultSet.getTimestamp("END_TIME"),
-                                resultSet.getInt      ("REPEAT")
-                        ));}}
-                status = StatusCode.SUCCESS.getCode();
+                    if(resultSet != null){
+                        while (resultSet.next()){
+                            act.add(new Activity(
+                                    resultSet.getInt      ("ID"),
+                                    resultSet.getString   ("NAME"),
+                                    resultSet.getString   ("LOCATION"),
+                                    resultSet.getDate     ("START_DATE"),
+                                    resultSet.getDate     ("END_DATE"),
+                                    resultSet.getTimestamp("START_TIME"),
+                                    resultSet.getTimestamp("END_TIME"),
+                                    resultSet.getInt      ("REPEAT")
+                            ));}
+                        status = StatusCode.SUCCESS.getCode();
+                    } else  status = StatusCode.FIELD.getCode();
+                }
+
             } catch (SQLException | ClassNotFoundException e) {
                 e.printStackTrace();
             }

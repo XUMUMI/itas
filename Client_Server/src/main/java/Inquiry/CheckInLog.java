@@ -15,13 +15,16 @@ public class CheckInLog {
                 int UID = sql.getUID(userName, password);
                 if(UID != 0){
                     ResultSet resultSet = sql.getActLog(UID);
-                    while (resultSet.next()){
-                        actLog.add(new ActLog(
-                                resultSet.getInt("ACTIVITY_ID"),
-                                resultSet.getString("CHECK_IN"),
-                                resultSet.getTimestamp("TIME")
-                        ));}}
-                status = StatusCode.SUCCESS.getCode();
+                    if(resultSet != null){
+                        while (resultSet.next()){
+                            actLog.add(new ActLog(
+                                    resultSet.getInt("ACTIVITY_ID"),
+                                    resultSet.getString("CHECK_IN"),
+                                    resultSet.getTimestamp("TIME")
+                            ));}
+                        status = StatusCode.SUCCESS.getCode();
+                    } else status = StatusCode.FIELD.getCode();
+                }
             } catch (SQLException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
