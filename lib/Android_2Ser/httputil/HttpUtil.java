@@ -6,11 +6,15 @@ import com.example.a27707.mycall.Mac.*;
 import com.example.a27707.mycall.itas_Gson.*;
 import com.google.gson.Gson;
 import com.example.a27707.mycall.okhttp.*;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 
 import RSA.*;
 
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import javax.crypto.Cipher;
@@ -22,6 +26,8 @@ public class HttpUtil {
         private static MacStatus macstatus = new MacStatus();
         private static LoginStatus loginstatus = new LoginStatus();
         private static SignStatus signstatus = new SignStatus();
+        private static ActinfoStatus actinfoStatus = new ActinfoStatus();
+        private static CheckInLogStatus checkInLogStatus =new CheckInLogStatus();
         private static String mac ="";
         private static  Gson gson = new Gson();
         private static final String  publicKey= "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCCYzfYWKbZ0JRfuykGP7F4g4q8Nv9aNMhmFTc16/DfI2AF0HJk3kaXuc/ULm1Ev3dedF4ifv41SnYaTqTC5xxES23kY8o9nHA7iBb4rIZ2j1ywWo7Q4AaFO4g8/krk1X3ktzSmjw0iRs7hdcYx/b16MFaLGHcOuIEUM1KAm76tUQIDAQAB";
@@ -111,24 +117,24 @@ public class HttpUtil {
         /**
          * @description: 登陆函数  加密后发送给服务器
          * @param url 服务器地址
-         * @param passwd 密码
+         * @param password 密码
          * @return 成功登录loginstatus.getStatus()返回1;失败loginstatus.getStatus()返回0;超时loginstatus.getStatus()返回2 连接异常loginstatus.getStatus()返回3
          * @throws
          * @author Teoan
          * @date 2019/3/17 21:55
          */
-        public static void login(String url, String passwd,HttpStatusLister lister){
+        public static void login(String url, String password,HttpStatusLister lister){
             if (mac.equals("")) getMac();
             HashMap<String,String> hashMap = new HashMap<>();
             hashMap.put("reqs","signIn");
             hashMap.put("mac",mac);
             try {
-                passwd = RSA.publicCrypt (Cipher.ENCRYPT_MODE, passwd, publicKey);
+                password = RSA.publicCrypt (Cipher.ENCRYPT_MODE, password, publicKey);
             } catch (Exception e) {
                 Log.d("RSA","encrypt error!");
                 e.printStackTrace();
             }
-            hashMap.put("password",passwd);
+            hashMap.put("password",password);
             OkhttpUtil.okHttpPost(url, hashMap, new CallBackUtil.CallBackString() {
                 @Override
                 public void onFailure(Call call, Exception e) {
@@ -169,24 +175,24 @@ public class HttpUtil {
          * @description 注册新用户
          * @param url 服务器地址
          * @param userName 用户名
-         * @param passwd 密码
-         * @return 成功登录signstauts.getStatus()返回1;失败signstauts.getStatus()返回0;连接超时signstauts.getStatus()返回2 连接异常signstauts.getStatus()返回3
+         * @param password 密码
+         * @return 成功登录signstauts.getStatus()返回1;失败signstauts.getStatus()返回-1;连接超时signstauts.getStatus()返回2 连接异常signstauts.getStatus()返回3
          * @throws
          * @author Teoan
          * @date 2019/3/17 22:13
          */
-        public static void sign(String url, String passwd, String userName,HttpStatusLister lister){
+        public static void signUp(String url, String userName, String password ,HttpStatusLister lister){
             if (mac.equals("")) getMac();
             HashMap<String,String> hashMap = new HashMap<>();
             hashMap.put("reqs","signUp");
             hashMap.put("mac",mac);
             try {
-                passwd = RSA.publicCrypt (Cipher.ENCRYPT_MODE, passwd, publicKey);
+                password = RSA.publicCrypt (Cipher.ENCRYPT_MODE, password, publicKey);
             } catch (Exception e) {
                 Log.d("RSA","encrypt error!");
                 e.printStackTrace();
             }
-            hashMap.put("password",passwd);
+            hashMap.put("password",password);
             hashMap.put("userName",userName);
             OkhttpUtil.okHttpPost(url, hashMap, new CallBackUtil.CallBackString() {
                 @Override
@@ -219,6 +225,112 @@ public class HttpUtil {
                         signstatus.setStatus(response.code());
                         Log.d("response", responseStr);
                         lister.onGetSignStatus(signstatus);
+                    }
+                }
+            });
+        }
+
+        /**
+         * @description 获取活动信息
+         * @param url 服务器地址
+         * @param userName 用户名
+         * @param password 密码
+         * @return 成功登录signstauts.getStatus()返回1;失败signstauts.getStatus()返回-1;连接超时signstauts.getStatus()返回2 连接异常signstauts.getStatus()返回3
+         * @throws
+         * @author Teoan
+         * @date 2019/4/5
+         */
+
+        public static void getActInfo(String url, String userName, String password ,HttpStatusLister lister){
+            HashMap<String,String> hashMap = new HashMap<>();
+            hashMap.put("reqs","getActInfo");
+            try {
+                password = RSA.publicCrypt (Cipher.ENCRYPT_MODE, password, publicKey);
+            } catch (Exception e) {
+                Log.d("RSA","encrypt error!");
+                e.printStackTrace();
+            }
+            hashMap.put("password",password);
+            hashMap.put("userName",userName);
+            OkhttpUtil.okHttpPost(url, hashMap, new CallBackUtil.CallBackString() {
+                @Override
+                public void onFailure(Call call, Exception e) {
+                    if(e instanceof SocketTimeoutException){//判断超时异常
+                        Log.d("okhttp","连接超时");
+                        actinfoStatus.setStatus(2);
+                    }
+                    if(e instanceof ConnectException){
+                        Log.d("okhttp","连接异常");
+                        actinfoStatus.setStatus(3);
+                    }
+                    lister.onGetActInfo(actinfoStatus);
+                }
+                @Override
+                public void onResponse(String responseStr, Response response) {
+                    if (responseStr != "" && response.code() == 200) {
+                        Log.d("http", responseStr);
+                        actinfoStatus.setStatus(0);
+                        try {
+                            responseStr = RSA.publicCrypt(Cipher.DECRYPT_MODE, responseStr, publicKey);
+                            Log.d("response", responseStr);
+                        } catch (Exception e) {
+                            Log.d("RSA", "decrypt error!");
+                            e.printStackTrace();
+                        }
+                        actinfoStatus = gson.fromJson(responseStr,ActinfoStatus.class);
+                        lister.onGetActInfo(actinfoStatus);
+                    } else {
+                        signstatus.setStatus(response.code());
+                        Log.d("response", responseStr);
+                        lister.onGetActInfo(actinfoStatus);
+                    }
+                }
+            });
+        }
+
+
+        public static void checkInLog(String url, String userName, String password ,HttpStatusLister lister)
+        {
+            HashMap<String,String> hashMap = new HashMap<>();
+            hashMap.put("reqs","checkInLog");
+            try {
+                password = RSA.publicCrypt (Cipher.ENCRYPT_MODE, password, publicKey);
+            } catch (Exception e) {
+                Log.d("RSA","encrypt error!");
+                e.printStackTrace();
+            }
+            hashMap.put("password",password);
+            hashMap.put("userName",userName);
+            OkhttpUtil.okHttpPost(url, hashMap, new CallBackUtil.CallBackString() {
+                @Override
+                public void onFailure(Call call, Exception e) {
+                    if(e instanceof SocketTimeoutException){//判断超时异常
+                        Log.d("okhttp","连接超时");
+                        checkInLogStatus.setStatus(2);
+                    }
+                    if(e instanceof ConnectException){
+                        Log.d("okhttp","连接异常");
+                        checkInLogStatus.setStatus(3);
+                    }
+                    lister.onGetActInfo(actinfoStatus);
+                }
+                @Override
+                public void onResponse(String responseStr, Response response) {
+                    if (responseStr != "" && response.code() == 200) {
+                        Log.d("http", responseStr);
+                        try {
+                            responseStr = RSA.publicCrypt(Cipher.DECRYPT_MODE, responseStr, publicKey);
+                            Log.d("response", responseStr);
+                        } catch (Exception e) {
+                            Log.d("RSA", "decrypt error!");
+                            e.printStackTrace();
+                        }
+                        checkInLogStatus = gson.fromJson(responseStr,CheckInLogStatus.class);
+                        lister.onGetCheckinLog(checkInLogStatus);
+                    } else {
+                        checkInLogStatus.setStatus(response.code());
+                        Log.d("response", responseStr);
+                        lister.onGetCheckinLog(checkInLogStatus);
                     }
                 }
             });

@@ -12,7 +12,7 @@ public class SignStatus {
      * status : 1
      */
 
-    private int status =1;
+    private int status =-1;
 
     public int getStatus() {
         return status;
